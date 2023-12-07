@@ -35,6 +35,8 @@ class Review(Base):
     
     game_id = Column(Integer(), ForeignKey('games.id'))
 
+    user_id = Column(Integer(), ForeignKey('users.id'))
+
     def __repr__(self):
         return f'Review(id={self.id}, ' + \
             f'score={self.score}, ' + \
